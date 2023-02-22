@@ -1,4 +1,10 @@
-import { Chord, chordParserFactory, chordRendererFactory } from 'chord-symbol';
+import {
+  Chord,
+  ChordParseFailure,
+  chordParserFactory,
+  chordRendererFactory,
+  MaybeChord,
+} from 'chord-symbol/lib/chord-symbol';
 
 export interface ChordInformation {
   /**
@@ -43,9 +49,9 @@ export const getChordInformation = (value: string): ChordInformation => {
   let error: any;
 
   try {
-    const maybeChord = parseChord(chordName);
+    const maybeChord: MaybeChord = parseChord(chordName);
 
-    if (maybeChord !== null && maybeChord.normalized) {
+    if ((maybeChord as Chord).normalized) {
       isChord = true;
       const chord = maybeChord as Chord;
       rootNote = chord.normalized?.rootNote;
@@ -55,8 +61,9 @@ export const getChordInformation = (value: string): ChordInformation => {
 
       // render chord name using chord-symbol
       chordName = renderChord(chord);
-    } else if (maybeChord !== null && maybeChord.error) {
-      error = maybeChord.error;
+    } else if ((maybeChord as ChordParseFailure).error) {
+      const chordError = maybeChord as ChordParseFailure;
+      error = chordError.error;
     }
   } catch (e) {
     error = e;

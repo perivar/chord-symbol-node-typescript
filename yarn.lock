@@ -1144,10 +1144,10 @@ char-regex@^1.0.2:
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
   integrity sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==
 
-chord-symbol@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/chord-symbol/-/chord-symbol-3.0.0.tgz#d16c4871f70fdaa5c1c13d837c865e0474e959db"
-  integrity sha512-mONjRMrU1RFm/LWSN8Np4lq52mM6sqbB3JI7WMEDb15ZOqcUAMB2ttdzEfJDa6QQJPol+gZrMA4P0mJK8uiq7w==
+chord-symbol@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/chord-symbol/-/chord-symbol-4.0.0.tgz#916603db52b028384991898217be9c89c3bcafdb"
+  integrity sha512-GeECWgVsAAC85G1qpvZo9eLkhfN/9cfX1gD7IXiYFary+JvMIhef3w/Wrm9O6tmjdP5nNeIb3pKDYuA1z25SLg==
   dependencies:
     lodash "^4.17.21"
 
